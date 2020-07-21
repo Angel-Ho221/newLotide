@@ -17,10 +17,10 @@ const eqArrays = function (arr1, arr2) {
 
 function assertArraysEqual(actual, expected) {
   if (eqArrays(actual, expected)) {
-    console.log(`Assertion Passed: ${actual} === ${expected}`);
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
-    console.log(`Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 4]))
+assertArraysEqual([1, 2, 3], [1, 2, 3])

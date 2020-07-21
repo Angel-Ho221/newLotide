@@ -21,6 +21,6 @@ const eqArrays = function (arr1, arr2) {
     }
   }
   return equal;
-}
+};
 
 assertEqual(eqArrays([1], [2, 3]), false);

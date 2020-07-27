@@ -1,27 +1,4 @@
-const eqArrays = function (arr1, arr2) {
-  let equal = true
-  if (!Array.isArray(arr1) || !Array.isArray(arr2) || arr1.length !== arr2.length) {
-    equal = false
-    return equal;
-  } else {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] === arr2[i]) {
-        equal = true;
-      } else {
-        equal = false
-      }
-    }
-  }
-  return equal;
-};
 
-const assertArraysEqual = function (actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
 // implement a function that returns the middle element
 const middle = function(array) {
   let midpoint = null;
@@ -51,4 +28,4 @@ const middle = function(array) {
   }
 }
 
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4])
+module.exports = middle;

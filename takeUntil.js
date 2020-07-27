@@ -1,27 +1,4 @@
-const eqArrays = function (arr1, arr2) {
-  let equal = true
-  if (!Array.isArray(arr1) || !Array.isArray(arr2) || arr1.length !== arr2.length) {
-    equal = false
-    return equal;
-  } else {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] === arr2[i]) {
-        equal = true;
-      } else {
-        equal = false
-      }
-    }
-  }
-  return equal;
-};
-
-function assertArraysEqual(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 const takeUntil = function (array, callback) {
   let box = [];
@@ -34,7 +11,7 @@ const takeUntil = function (array, callback) {
     }
   }
 }
-
+module.exports = takeUntil;
 // const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 // const results1 = takeUntil(data1, x => x < 0);
 // console.log(results1);

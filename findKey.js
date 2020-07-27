@@ -1,10 +1,4 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('../assertEqual2');
 
 const findKey = function (object, callback) {
   for (const [key, value] of Object.entries(object)) {
@@ -14,3 +8,4 @@ const findKey = function (object, callback) {
   }
   return undefined;
 }
+module.exports = findKey;
